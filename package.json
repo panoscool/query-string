@@ -1,21 +1,21 @@
 {
-	"name": "qs-ts",
+	"name": "@panoscool/query-string",
 	"version": "0.1.9",
 	"license": "MIT",
 	"description": "A TypeScript library to parse and stringify URL query strings.",
 	"funding": "https://github.com/sponsors/panoscool",
-	"homepage": "https://github.com/panoscool/qs-ts#readme",
+	"homepage": "https://github.com/panoscool/query-string#readme",
 	"author": {
-		"name": "Panos Kullolli",
+		"name": "Lavdimir Kullolli",
 		"email": "lkullolli@gmail.com",
 		"url": "https://panoscool.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/panoscool/qs-ts.git"
+		"url": "git+https://github.com/panoscool/query-string.git"
 	},
 	"bugs": {
-		"url": "https://github.com/panoscool/qs-ts/issues"
+		"url": "https://github.com/panoscool/query-string/issues"
 	},
 	"exports": {
 		".": {
@@ -27,33 +27,35 @@
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
+	"sideEffects": false,
 	"scripts": {
 		"test": "bun test",
 		"build": "bun build.ts",
+		"verify": "node verify.mjs",
 		"prepublishOnly": "npm run build",
 		"release": "bash ./scripts/release.sh",
 		"lint": "biome check",
 		"format": "biome format --write"
 	},
 	"engines": {
-		"node": ">=24"
+		"node": ">=20"
 	},
 	"files": [
 		"dist"
 	],
 	"keywords": [
-		"qs-ts",
 		"query",
 		"string",
 		"params",
-		"parameter",
 		"url",
 		"parse",
-		"stringify",
 		"encode",
 		"decode",
+		"parameter",
+		"stringify",
 		"querystring",
 		"searchparams",
+		"query-string",
 		"urlsearchparams"
 	],
 	"devDependencies": {

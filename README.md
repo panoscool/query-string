@@ -1,4 +1,4 @@
-# qs-ts
+# @panoscool/query-string
 
 A focused TypeScript library for parsing and stringifying URL query strings with predictable behavior, explicit typing controls, and practical defaults.
 
@@ -14,7 +14,7 @@ A focused TypeScript library for parsing and stringifying URL query strings with
 ## Installation
 
 ```bash
-npm install qs-ts
+npm install @panoscool/query-string
 ```
 
 > 💡 Consider using the native browser API `URLSearchParams` for simple use cases.
@@ -24,7 +24,7 @@ npm install qs-ts
 ### Basic Parsing
 
 ```typescript
-import { parse } from 'qs-ts';
+import { parse } from '@panoscool/query-string';
 
 const result = parse('a=1&b=hello&c=true');
 console.log(result);
@@ -34,7 +34,7 @@ console.log(result);
 ### Basic Stringifying
 
 ```typescript
-import { stringify } from 'qs-ts';
+import { stringify } from '@panoscool/query-string';
 
 const query = stringify({ a: 1, b: 'hello', c: true });
 console.log(query);
@@ -44,7 +44,7 @@ console.log(query);
 ### CommonJS
 
 ```javascript
-const { parse, stringify } = require('qs-ts');
+const { parse, stringify } = require('@panoscool/query-string');
 ```
 
 ## API
@@ -314,3 +314,12 @@ bun verify.mjs
 ## License
 
 MIT - see [LICENSE](LICENSE)
+
+
+# TODO:
+Deprecating the old qs-ts package
+
+This is a manual npm command you run locally (not part of CI — deprecation can't go through OIDC trusted publishing):
+
+  npm login                       # need an account with publish rights to qs-ts
+  npm deprecate qs-ts "Renamed to @panoscool/query-string — install that instead."

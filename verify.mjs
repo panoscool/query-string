@@ -42,7 +42,7 @@ const tgz = runGet(
 if (!tgz) fail("npm pack did not produce a .tgz file");
 
 // 5) Install tarball into a temp consumer project and test imports + types
-const dir = mkdtempSync(join(tmpdir(), "qs-ts-consumer-"));
+const dir = mkdtempSync(join(tmpdir(), "query-string-consumer-"));
 console.log(`\n📦 Temp consumer project: ${dir}`);
 
 try {
@@ -55,7 +55,7 @@ try {
 	writeFileSync(
 		join(dir, "esm.mjs"),
 		`${`
-            import { parse, stringify } from "qs-ts";
+            import { parse, stringify } from "@panoscool/query-string";
             console.log(parse("a=1&b=2"));
             console.log(stringify({ a: 1, b: "two" }));
 `.trim()}\n`,
@@ -66,7 +66,7 @@ try {
 	writeFileSync(
 		join(dir, "cjs.cjs"),
 		`${`
-            const { parse, stringify } = require("qs-ts");
+            const { parse, stringify } = require("@panoscool/query-string");
             console.log(parse("a=1&b=2"));
             console.log(stringify({ a: 1, b: "two" }));
 `.trim()}\n`,
@@ -96,7 +96,7 @@ try {
 	writeFileSync(
 		join(dir, "types-test.ts"),
 		`${`
-            import { parse, stringify } from "qs-ts";
+            import { parse, stringify } from "@panoscool/query-string";
 
             const q1 = parse("a=1&b=true", { types: { a: "number", b: "boolean" } });
             const q2 = parse("ids=1,2,3", { array: { format: "comma", encoded: "preserve" }, types: { ids: "number[]" } });

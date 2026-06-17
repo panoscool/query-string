@@ -40,7 +40,7 @@ const proc = Bun.spawn({
 		"x",
 		"tsc",
 		"-p",
-		"tsconfig.json",
+		"tsconfig.build.json",
 		"--noEmit",
 		"false",
 		"--declaration",
