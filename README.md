@@ -291,16 +291,11 @@ console.log(fullUrl);
 
 ## Development
 
-### Building
-
 ```bash
-bun run build
-```
-
-### Testing
-
-```bash
-bun test
+bun install
+bun run lint    # biome
+bun test        # bun test runner
+bun run build   # ESM + CJS + type declarations into dist/
 ```
 
 ### Verification
