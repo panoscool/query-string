@@ -1,6 +1,6 @@
 {
 	"name": "@panoscool/query-string",
-	"version": "0.1.9",
+	"version": "0.1.10",
 	"license": "MIT",
 	"description": "A TypeScript library to parse and stringify URL query strings.",
 	"funding": "https://github.com/sponsors/panoscool",
