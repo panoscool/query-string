@@ -314,12 +314,3 @@ bun verify.mjs
 ## License
 
 MIT - see [LICENSE](LICENSE)
-
-
-# TODO:
-Deprecating the old qs-ts package
-
-This is a manual npm command you run locally (not part of CI — deprecation can't go through OIDC trusted publishing):
-
-  npm login                       # need an account with publish rights to qs-ts
-  npm deprecate qs-ts "Renamed to @panoscool/query-string — install that instead."
